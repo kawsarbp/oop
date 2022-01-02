@@ -67,6 +67,14 @@ class Blog
     {
         return mysqli_query(Dbcon::dbcon(), "SELECT * FROM `blog` WHERE `id`='$id'");
     }
+    public function activeblog()
+    {
+        return mysqli_query(Dbcon::dbcon(), "SELECT * FROM `blog` WHERE `status` = '1'");
+    }
+    public function ShowBlogPost($id)
+    {
+        return mysqli_query(Dbcon::dbcon(), "SELECT * FROM `blog` WHERE `status` = '1' AND `cat_id` = '$id' ORDER BY `id` DESC ");
+    }
 
     public function updateBlog($data)
     {
