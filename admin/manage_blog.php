@@ -85,7 +85,7 @@ require_once "includes/header.php";
                                             </td>
                                             <td>
                                                 <a href="edit_blog.php?id=<?= base64_encode($row['id']) ?>" class="btn btn-info btn-sm"><i class="fa fa-pencil-square-o"></i></a>
-                                                <a href="delete.php?id=<?= base64_encode($row['id']) ?>&blog=blog" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
+                                                <a href="delete.php?id=<?= base64_encode($row['id']) ?>&blog=blog&filename=<?= $row['photo'] ?>" onclick="return confirm('Are you sure you want to delete?')" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         <?php $sn++; } ?>

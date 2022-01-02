@@ -18,7 +18,7 @@ require_once 'header.php';
         <div class="col-lg-8">
             <!-- Featured blog post-->
             <div class="card mb-4">
-                <a href="javascript:void(o)"><img class="card-img-top" src="uploads/<?= $siglerow['photo'] ?>" alt="Photo" style="width:100%; height:500px;"></a>
+                <a href="javascript:void(o)"><img class="card-img-top" src="uploads/<?= $siglerow['photo'] ?>" alt="Photo" style="width:100%; height:400px;"></a>
                 <div class="card-body">
                     <div class="small text-muted">Post Create Date: <?= date('D-M-Y',strtotime($siglerow['createtime'])) ?></div>
                     <h2 class="card-title"><?= $siglerow['title'] ?></h2>

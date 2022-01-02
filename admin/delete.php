@@ -11,5 +11,7 @@ if(isset($_GET['delete']) && $_GET['cat'])
 if(isset($_GET['id']) && $_GET['blog'])
 {
     $id = base64_decode($_GET['id']);
+    $filename = $_GET['filename'];
+    unlink('../uploads/'.$filename);
     $blog->deleteblog($id);
 }
