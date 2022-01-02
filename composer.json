@@ -1,0 +1,15 @@
+{
+    "name": "mlc/oop",
+    "autoload": {
+        "psr-4": {
+            "Mlc\\Oop\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kawsar",
+            "email": "kawsarfaz100@gmail.com"
+        }
+    ],
+    "require": {}
+}
