@@ -9,7 +9,7 @@ class Blog
 
         $cat_id = $data['cat_id'];
         $title = $data['title'];
-        $content = $data['content'];
+        $content = mysqli_real_escape_string(Dbcon::dbcon(),$data['content']);
         $status = $data['status'];
         $name = $_SESSION['name'];
 
@@ -17,7 +17,7 @@ class Blog
         $file_ex = end($file);
         $photo = date('Ymdhis.').$file_ex;
 
-        if(!empty($_FILES['photo']['name']) && !empty($cat_id) && !empty($title) && !empty($content) && !empty($status) && !empty($name) )
+        if(!empty($_FILES['photo']['name']) && !empty($cat_id) && !empty($title) && !empty($content) &&  !empty($name) )
         {
             $result = mysqli_query(Dbcon::dbcon(), "INSERT INTO `blog`(`cat_id`, `title`, `content`, `photo`, `name`, `status`) VALUES ('$cat_id','$title','$content','$photo','$name','$status')");
             if($result)
@@ -72,7 +72,7 @@ class Blog
     {
         $cat_id = $data['cat_id'];
         $title = $data['title'];
-        $content = $data['content'];
+        $content = mysqli_real_escape_string(Dbcon::dbcon(),$data['content']);
         $status = $data['status'];
         $name = $_SESSION['name'];
         $id = $data['id'];
