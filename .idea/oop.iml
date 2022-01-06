@@ -10,5 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="lms" />
+    <orderEntry type="module" module-name="dcw" />
   </component>
 </module>
